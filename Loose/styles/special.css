@@ -1,0 +1,25 @@
+div.Special_Spacer {
+	width: inherit;
+	height: 50px;
+}
+
+div.Special_Spacer_Line_Container {
+	width: inherit;
+	height: 50px;
+	
+	position: relative;
+}
+
+div.Special_Spacer_Line {
+	width: inherit;
+	height: 50%;
+	
+	bottom: 0;
+	position: absolute;
+	
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: gainsboro;
+	
+	box-sizing: border-box;
+}

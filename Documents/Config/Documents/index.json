@@ -1,0 +1,16 @@
+{
+	"File Extension": "html",
+	
+	"Values": {
+		"Title": "NeonOcean",
+		"Description": "",
+		
+		"Base Path": ""
+	},
+
+	"Sources": {
+		"Content": "index.html"
+	},
+
+	"Template Config": "Rooted.json"
+}

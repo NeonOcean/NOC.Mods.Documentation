@@ -1,0 +1,8 @@
+{
+	"Namespace": "NeonOcean.NOC.Mods.Documentation",
+	"Domain": "https://doc.mods.neonoceancreations.com",
+	"Github Name": "NOC.Mods.Documentation",
+	"Sitemap Excluded": [
+		"404.html"
+	]
+}

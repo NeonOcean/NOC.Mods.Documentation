@@ -1,0 +1,16 @@
+div.Document_Breadcrumbs_Container {
+	width: inherit;
+	height: 50px;
+}
+
+div.Document_Breadcrumbs {
+	line-height: 50px;
+	padding: 0px 20px 0px 20px;
+	
+	background-color: mistyrose;
+}
+
+span.Document_Breadcrumbs, span.Document_Breadcrumbs_Link {
+	color: gray;
+}
+

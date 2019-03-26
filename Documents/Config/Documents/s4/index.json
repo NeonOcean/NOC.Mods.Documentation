@@ -1,0 +1,26 @@
+{
+	"File Extension": "html",
+
+	"Values": {
+		"Name": "The Sims 4",
+		"Title": "NeonOcean",
+		"Description": "NeonOcean's mods for The Sims 4",
+
+		"Base Path": "../.."
+	},
+
+	"Sources": {
+		"Documentation": "s4/main/index.html"
+	},
+	
+	"Scripts": {
+		"Breadcrumbs": {
+			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
+			"Function": "BuildBreadcrumbs",
+			"Inputs": [ "Document Path" ]
+		}
+	},
+
+
+	"Template Config": "Documentation.json"
+}

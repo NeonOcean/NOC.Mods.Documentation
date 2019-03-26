@@ -1,0 +1,57 @@
+ul.Structure_List {
+	list-style-type: none;
+	
+	padding: 0px 20px 0px 20px;
+}
+
+li.Structure_Entry {
+	width: auto;
+	height: auto;
+	
+	margin-top: 10px;
+	
+	position: relative;
+	
+	line-height: 20px;
+	word-wrap: break-word;
+}
+
+div.Structure_Entry_Expander_Hidden, div.Structure_Entry_Expander_Collapsed, div.Structure_Entry_Expander_Expanded {
+	width: 20px;
+	height: 20px;
+	
+	position: absolute;
+	
+	display: inline-block;
+}
+
+div.Structure_Entry_Expander_Collapsed, div.Structure_Entry_Expander_Expanded  {	
+	background-color: lightgray;
+	cursor: pointer;
+}
+
+div.Structure_Entry_Expander_Collapsed {
+	background-image: url(../images/arrow-right.png);
+}
+
+div.Structure_Entry_Expander_Expanded {
+	background-image: url(../images/arrow-down.png);
+}
+
+a.Structure_Entry_Name, span.Structure_Entry_Name {
+	margin: 0px 20px 0px 30px;
+
+	display: inline-block;
+	
+	color: gray;
+	color: gray;
+}
+
+span.Structure_Entry_Name {
+	cursor: pointer;	
+}
+
+a.Structure_Entry_Name {
+	text-decoration: none;
+
+}

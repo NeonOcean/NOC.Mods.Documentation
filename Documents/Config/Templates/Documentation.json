@@ -1,0 +1,38 @@
+{
+	"Document": {
+		"Template": "Universal.html",
+
+		"Formatting": {
+			"Title": "Title",
+			"Description": "Description",
+
+			"Base Path": "Base Path",
+
+			"Content": [
+				{
+					"Template": "Spacer.html"
+				},
+				
+				{
+					"Template": "BreadcrumbsContainer.html",
+					
+					"Formatting": {
+						"Breadcrumbs": "Breadcrumbs"
+					}
+				},
+				
+				{
+					"Template": "Spacer.html"
+				},
+
+				{
+					"Template": "Documentation.html",
+
+					"Formatting": {
+						"Documentation": "Documentation"
+					}
+				}
+			]
+		}
+	}
+}

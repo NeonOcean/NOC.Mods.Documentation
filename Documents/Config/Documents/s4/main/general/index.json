@@ -1,0 +1,25 @@
+{
+	"File Extension": "html",
+	
+	"Values": {
+		"Name": "General",
+		"Title": "NeonOcean - Main: Overview",
+		"Description": "Overview",
+
+		"Base Path": "../../.."
+	},
+
+	"Sources": {
+		"Documentation": "s4/main/general/index.html"
+	},
+	
+	"Scripts": {
+		"Breadcrumbs": {
+			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
+			"Function": "BuildBreadcrumbs",
+			"Inputs": [ "Document Path" ]
+		}
+	},
+
+	"Template Config": "Documentation.json"
+}

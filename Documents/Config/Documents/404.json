@@ -1,16 +1,16 @@
 {
-	"File Extension": "html",
+	"FileExtension": "html",
 
 	"Values": {
 		"Title": "404 page not found",
 		"Description": "",
 		
-		"Base Path": "https://doc.mods.neonoceancreations.com"
+		"BasePath": "https://doc.mods.neonoceancreations.com"
 	},
 
 	"Sources": {
 		"Content": "404.html"
 	},
 
-	"Template Config": "Error.json"
+	"TemplateConfig": "Error.json"
 }

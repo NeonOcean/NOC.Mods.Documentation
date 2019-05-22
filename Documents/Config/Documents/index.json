@@ -1,16 +1,16 @@
 {
-	"File Extension": "html",
+	"FileExtension": "html",
 	
 	"Values": {
 		"Title": "Documentation",
 		"Description": "",
 		
-		"Base Path": ""
+		"BasePath": ""
 	},
 
 	"Sources": {
 		"Content": "index.html"
 	},
 
-	"Template Config": "Rooted.json"
+	"TemplateConfig": "Rooted.json"
 }

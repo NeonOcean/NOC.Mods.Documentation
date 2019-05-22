@@ -10,7 +10,7 @@ div.Document_Breadcrumbs {
 	background-color: mistyrose;
 }
 
-span.Document_Breadcrumbs, span.Document_Breadcrumbs_Link {
+span.Document_Breadcrumb, span.Document_Breadcrumb_Link {
 	color: gray;
 }
 

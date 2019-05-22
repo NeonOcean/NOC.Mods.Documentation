@@ -53,7 +53,7 @@ class _StructureEntry:
 			if self.Link:
 				structureText += ",\n\t\"Path\": \"" + self.DocumentPath + "\""
 
-			structureText += ",\n\t\"Start Opened\": " + str(self.StartOpened).lower()
+			structureText += ",\n\t\"StartOpened\": " + str(self.StartOpened).lower()
 
 			if entriesText != "":
 				entriesText = "\t" + entriesText
@@ -79,10 +79,10 @@ def _BuildStructure () -> None:
 			rootStructureConfig = json.JSONDecoder().decode(rootStructureConfigFile.read())
 	else:
 		rootStructureConfig = {
-			"Document Path": "index.html",
-			"Entry Path": "ROOT",
+			"DocumentPath": "index.html",
+			"EntryPath": "ROOT",
 			"Invisible": True,
-			"Start Opened": True,
+			"StartOpened": True,
 			"Name": "",
 			"Link": False,
 			"Priority": 0
@@ -114,24 +114,24 @@ def _ReadStructureConfig (structureConfigFilePath: str) -> typing.Dict[str, typi
 	with open(structureConfigFilePath) as structureConfigFile:
 		structureConfig = json.JSONDecoder().decode(structureConfigFile.read())  # type: dict
 
-	structureFileExtension = structureConfig["File Extension"]  # type: str
+	structureFileExtension = structureConfig["FileExtension"]  # type: str
 
 	documentRelativeFilePath = os.path.splitext(structureConfigFilePath.replace(Paths.StructureSourcePath + os.path.sep, ""))[0] + "." + structureFileExtension  # type: str
 	documentRelativeFilePath = documentRelativeFilePath.replace("\\", "/")
 
-	structureConfig["Document Path"] = documentRelativeFilePath
+	structureConfig["DocumentPath"] = documentRelativeFilePath
 
 	if os.path.splitext(os.path.split(documentRelativeFilePath)[1])[0] == "index":
-		structureConfig["Entry Path"] = os.path.split(documentRelativeFilePath)[0]
+		structureConfig["EntryPath"] = os.path.split(documentRelativeFilePath)[0]
 	else:
-		structureConfig["Entry Path"] = os.path.splitext(documentRelativeFilePath)[0]
+		structureConfig["EntryPath"] = os.path.splitext(documentRelativeFilePath)[0]
 
 	return structureConfig
 
 def _ReadStructure (rootStructureConfig: dict, structureConfigs: typing.List[dict]) -> str:
-	rootStructureDocumentPath = rootStructureConfig.get("Document Path")  # type: str
+	rootStructureDocumentPath = rootStructureConfig.get("DocumentPath")  # type: str
 	rootStructureInvisible = rootStructureConfig["Invisible"]  # type: bool
-	rootStructureStartOpened = rootStructureConfig["Start Opened"]  # type: bool
+	rootStructureStartOpened = rootStructureConfig["StartOpened"]  # type: bool
 	rootStructureName = rootStructureConfig["Name"]  # type: str
 	rootStructureLink = rootStructureConfig["Link"]  # type: bool
 	rootStructurePriority = rootStructureConfig["Priority"]  # type: numbers.Number
@@ -140,11 +140,11 @@ def _ReadStructure (rootStructureConfig: dict, structureConfigs: typing.List[dic
 	rootStructure.SetValues(rootStructureDocumentPath, rootStructureInvisible, rootStructureStartOpened, rootStructureName, rootStructureLink, rootStructurePriority)
 
 	for structureConfig in structureConfigs:  # type: dict
-		structureEntryPath = structureConfig["Entry Path"]  # type: str
+		structureEntryPath = structureConfig["EntryPath"]  # type: str
 
-		structureDocumentPath = structureConfig["Document Path"]  # type: str
+		structureDocumentPath = structureConfig["DocumentPath"]  # type: str
 		structureInvisible = structureConfig["Invisible"]  # type: bool
-		structureStartOpened = structureConfig["Start Opened"]  # type: bool
+		structureStartOpened = structureConfig["StartOpened"]  # type: bool
 		structureName = structureConfig["Name"]  # type: str
 		structureLink = structureConfig["Link"]  # type: bool
 		structurePriority = structureConfig["Priority"]  # type: numbers.Number

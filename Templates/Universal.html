@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang = "en">
 	<head>
-		<title>{Title}</title>
-		<meta name = "description" content = "{Description}" />
+		<title>{<-Title->}</title>
+		<meta charset="utf-8"/>
+		<meta name = "description" content = "{<-Description->}" />
 		
-		<base href = "{Base Path}" />
+		<base href = "{<-BasePath->}" />
 		
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		
-		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/breadcrumbs.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/error.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/documentation.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/special.css" />
 		<link rel = "stylesheet" type = "text/css" href = "styles/structure.css" />
@@ -52,7 +54,7 @@
 			<div class = "Content_Container">
 				<div class = "Content">
 					<div class = "Content_Offset"><!--
-						-->{Content}<!--
+						-->{<-Content->}<!--
 					--></div>
 				</div>
 			</div>

@@ -1,25 +1,25 @@
 {
-	"File Extension": "html",
+	"FileExtension": "html",
 	
 	"Values": {
 		"Name": "Installation",
 		"Title": "Docs - Main: Installation",
 		"Description": "Download and install Main",
 		
-		"Base Path": "../../.."
+		"BasePath": "../../../.."
 	},
 
 	"Sources": {
-		"Documentation": "s4/main/general/installation.html"
+		"Documentation": "s4/main/general/installation/index.html"
 	},
 	
 	"Scripts": {
 		"Breadcrumbs": {
 			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
 			"Function": "BuildBreadcrumbs",
-			"Inputs": [ "Document Path" ]
+			"Inputs": [ "DocumentPath" ]
 		}
 	},
 
-	"Template Config": "Documentation.json"
+	"TemplateConfig": "Documentation.json"
 }

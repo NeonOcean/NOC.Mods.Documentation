@@ -65,8 +65,8 @@ function CreateStructure (structure, containingElement, isRoot) {
 		if("Entries" in structure[structureIndex]) {
 			CreateStructure(structure[structureIndex]["Entries"], entryElement, false);
 			
-			if("Start Opened" in structure[structureIndex]) {
-				if(structure[structureIndex]["Start Opened"]) {
+			if("StartOpened" in structure[structureIndex]) {
+				if(structure[structureIndex]["StartOpened"]) {
 					StructureChangeExpanderElement(entryExpanderElement, ChangeExpand);
 				}
 			}

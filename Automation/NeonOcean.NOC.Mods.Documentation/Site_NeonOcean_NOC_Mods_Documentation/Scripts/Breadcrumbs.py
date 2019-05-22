@@ -3,6 +3,7 @@ import typing
 import json
 
 from Site_NeonOcean_NOC_Mods_Documentation import Paths
+from Site_NeonOcean_NOC_Mods_Documentation.Tools import Formatting
 
 def BuildBreadcrumbs (documentPath: str) -> str:
 	documentPath = documentPath.replace(os.path.altsep, os.path.sep)
@@ -42,9 +43,9 @@ def BuildBreadcrumbs (documentPath: str) -> str:
 				continue
 
 			if currentStructureLink:
-				breadcrumbText = breadcrumbsLinkText.format(BreadcrumbName = currentStructureName, BreadcrumbLink = currentDocumentPath)  # type: str
+				breadcrumbText = Formatting.Format(breadcrumbsLinkText, BreadcrumbName = currentStructureName, BreadcrumbLink = currentDocumentPath)  # type: str
 			else:
-				breadcrumbText = breadcrumbsPartText.format(BreadcrumbName = currentStructureName)  # type: str
+				breadcrumbText = Formatting.Format(breadcrumbsPartText, BreadcrumbName = currentStructureName)  # type: str
 
 			if combinedText != "":
 				combinedText += "\n\n" + breadcrumbsSeparatorText + "\n\n" + breadcrumbText
@@ -64,9 +65,9 @@ def BuildBreadcrumbs (documentPath: str) -> str:
 
 			if not structureInvisible:
 				if structureLink:
-					breadcrumbText = breadcrumbsLinkText.format(BreadcrumbName = structureName, BreadcrumbLink = documentPath)  # type: str
+					breadcrumbText = Formatting.Format(breadcrumbsLinkText, BreadcrumbName = structureName, BreadcrumbLink = documentPath)  # type: str
 				else:
-					breadcrumbText = breadcrumbsPartText.format(BreadcrumbName = structureName)  # type: str
+					breadcrumbText = Formatting.Format(breadcrumbsPartText, BreadcrumbName = structureName)  # type: str
 
 				if combinedText != "":
 					combinedText += "\n\n" + breadcrumbsSeparatorText + "\n\n" + breadcrumbText

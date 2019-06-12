@@ -2,11 +2,7 @@
 	"FileExtension": "html",
 	
 	"Values": {
-		"Name": "NeonOcean.Main",
-		"Title": "Docs - Main",
-		"Description": "The mod page for NeonOcean's Main",
-
-		"BasePath": "../.."
+		"Title": "Docs - Main"
 	},
 
 	"Sources": {

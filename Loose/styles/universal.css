@@ -1,7 +1,13 @@
+*, *::before , *::after {
+	box-sizing: border-box;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0px;
+	
+	font-family: Arial, sans-serif;
 }
 
 a {
@@ -30,15 +36,13 @@ div.Header {
 	width: inherit;
 	height: inherit;
 	
-	min-width: 1000px;
+	min-width: 1400px;
 	
 	background-color: white;
 		
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: gainsboro;
-	
-	box-sizing: border-box;
 }
 
 div.Header_Navigation_Container {
@@ -86,53 +90,42 @@ div.Sidebar {
 	border-right-style: solid;
 	border-right-color: gainsboro;
 	
-	box-sizing: border-box;
-	
 	overflow: overlay;
 }
 
 div.Content_Container {
 	width: inherit;
-	height: inherit;
 	
 	position: absolute;
 	
 	top: 0px;
 	
-	min-width: 1000px;
+	min-width: 1400px;
 	min-height: 800px;
 }
 
 div.Content {
 	width: inherit;
-	height: inherit;
 	
 	padding-top: 75px;
 	padding-left: 350px;
-	box-sizing: border-box;
 }
 
 div.Content_Offset {
 	width: inherit;
-	height: inherit;
 	
 	display: inline-block;
 	
 	padding: 0px 50px 0px 50px;
-	box-sizing: border-box;
 }
 
-div.Footer_Container {
-	width: inherit;
-	height: auto;
+div.Content_Footer {
+	height: 100px;
+	
+	padding-left: 350px;
 }
 
-div.Footer {
-	width: inherit;
-	height: auto;
-}
-
-@media only screen and (max-width: 1000px), screen and (max-height: 800px) {	
+@media only screen and (max-width: 1400px), screen and (max-height: 800px) {	
 	div.Header_Container {
 		position: relative;
 	}

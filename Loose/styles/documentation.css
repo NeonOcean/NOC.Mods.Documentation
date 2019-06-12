@@ -1,0 +1,15 @@
+div.Documentation hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.Documentation table {	
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+div.Documentation th, td {
+	border-width: 2px;
+	border-style: solid;
+	border-color: gray;
+}

@@ -1,0 +1,21 @@
+{
+	"FileExtension": "html",
+	
+	"Values": {
+		"Title": "Docs - Main: Reporting Bugs"
+	},
+
+	"Sources": {
+		"Documentation": "s4/main/general/reporting-bugs/index.html"
+	},
+	
+	"Scripts": {
+		"Breadcrumbs": {
+			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
+			"Function": "BuildBreadcrumbs",
+			"Inputs": [ "DocumentPath" ]
+		}
+	},
+
+	"TemplateConfig": "Documentation.json"
+}

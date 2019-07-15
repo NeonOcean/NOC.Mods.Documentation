@@ -5,13 +5,34 @@ ChangeCollapse = 2
 function LoadStructure () {
 	CreateStructure(StructureIndexing, document.getElementById("Sidebar"), true);
 	
-	documentLowerPath = window.location.pathname.substring(1).toLowerCase();
+	documentURLLower = window.location.pathname.substring(1).toLowerCase();
+	documentURLLower = documentURLLower.replace(new RegExp("/+$"), "");
 	
-	linkElements = document.getElementsByTagName("A");
+	documentLastSlashPosition = documentURLLower.lastIndexOf("/");
+	documentName = documentURLLower.substring(documentLastSlashPosition + 1);
+	documentName = documentName.substring(0, documentName.lastIndexOf("."));
+	
+	if(documentName == "index") {
+		documentURLLower = documentURLLower.substring(0, documentLastSlashPosition);
+	}
+	
+	linkElements = document.getElementById("Sidebar").getElementsByTagName("A");
 	
 	for(var linkElementIndex = 0; linkElementIndex < linkElements.length; linkElementIndex++) {
 		if(linkElements[linkElementIndex].className == "Structure_Entry_Name") {
-			if(linkElements[linkElementIndex].pathname.substring(1).toLowerCase() == documentLowerPath) {
+			
+			linkURLLower = linkElements[linkElementIndex].pathname.substring(1).toLowerCase();
+			linkURLLower = linkURLLower.replace(new RegExp("/+$"), "");
+			
+			linkLastSlashPosition = linkURLLower.lastIndexOf("/");
+			linkName = linkURLLower.substring(linkLastSlashPosition + 1);
+			linkName = linkName.substring(0, linkName.lastIndexOf("."));
+			
+			if(linkName == "index") {
+				linkURLLower = linkURLLower.substring(0, linkLastSlashPosition);
+			}
+			
+			if(linkURLLower == documentURLLower) {
 				StructureChangeCurrentDocument(linkElements[linkElementIndex]);
 				linkElements[linkElementIndex].setAttribute("style", "color: crimson; font-weight: bold;");
 				break;
@@ -147,5 +168,5 @@ function StructureFlipNameElementEvent () {
 function StructureFlipExpanderElementEvent () {
 	StructureChangeExpanderElement(this, ChangeFlip);
 }
-	
+
 window.addEventListener("load", LoadStructure);

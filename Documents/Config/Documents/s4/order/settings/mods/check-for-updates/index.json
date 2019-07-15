@@ -1,0 +1,21 @@
+{
+	"FileExtension": "html",
+	
+	"Values": {
+		"Title": "Docs - Order: Check For Updates"
+	},
+
+	"Sources": {
+		"Documentation": "s4/order/settings/mods/check-for-updates/index.html"
+	},
+	
+	"Scripts": {
+		"Breadcrumbs": {
+			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
+			"Function": "BuildBreadcrumbs",
+			"Inputs": [ "DocumentPath" ]
+		}
+	},
+
+	"TemplateConfig": "Documentation.json"
+}

@@ -52,19 +52,35 @@ var StructureIndexing = [
 						"StartOpened": false,
 						"Entries": [
 							{
-								"Name": "Check For Preview Updates",
-								"Path": "s4/main/settings/check-for-preview-updates/index.html",
-								"StartOpened": false
-							},
-							{
-								"Name": "Check For Updates",
-								"Path": "s4/main/settings/check-for-updates/index.html",
-								"StartOpened": false
-							},
-							{
-								"Name": "Show Promotions",
-								"Path": "s4/main/settings/show-promotions/index.html",
-								"StartOpened": false
+								"Name": "Mods",
+								"StartOpened": false,
+								"Entries": [
+									{
+										"Name": "Check For Preview Updates",
+										"Path": "s4/main/settings/mods/check-for-preview-updates/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Check For Preview Updates Default",
+										"Path": "s4/main/settings/mods/check-for-preview-updates-default/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Check For Updates",
+										"Path": "s4/main/settings/mods/check-for-updates/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Check For Updates Default",
+										"Path": "s4/main/settings/mods/check-for-updates-default/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Show Promotions",
+										"Path": "s4/main/settings/mods/show-promotions/index.html",
+										"StartOpened": false
+									}
+								]
 							}
 						]
 					}
@@ -75,6 +91,17 @@ var StructureIndexing = [
 				"Path": "s4/order/index.html",
 				"StartOpened": false,
 				"Entries": [
+					{
+						"Name": "Development",
+						"StartOpened": false,
+						"Entries": [
+							{
+								"Name": "Load Order Files",
+								"Path": "s4/order/development/load-order-files/index.html",
+								"StartOpened": false
+							}
+						]
+					},
 					{
 						"Name": "General",
 						"StartOpened": false,
@@ -96,19 +123,25 @@ var StructureIndexing = [
 						"StartOpened": false,
 						"Entries": [
 							{
-								"Name": "Check For Preview Updates",
-								"Path": "s4/order/settings/check-for-preview-updates/index.html",
-								"StartOpened": false
-							},
-							{
-								"Name": "Check For Updates",
-								"Path": "s4/order/settings/check-for-updates/index.html",
-								"StartOpened": false
-							},
-							{
-								"Name": "Show Promotions",
-								"Path": "s4/order/settings/show-promotions/index.html",
-								"StartOpened": false
+								"Name": "Mods",
+								"StartOpened": false,
+								"Entries": [
+									{
+										"Name": "Check For Preview Updates",
+										"Path": "s4/order/settings/mods/check-for-preview-updates/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Check For Updates",
+										"Path": "s4/order/settings/mods/check-for-updates/index.html",
+										"StartOpened": false
+									},
+									{
+										"Name": "Show Promotions",
+										"Path": "s4/order/settings/mods/show-promotions/index.html",
+										"StartOpened": false
+									}
+								]
 							}
 						]
 					}

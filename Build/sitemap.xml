@@ -22,16 +22,25 @@
 		<loc>https://doc.mods.neonoceancreations.com/s4/main/general/reporting-bugs/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/check-for-preview-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-preview-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/check-for-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-preview-updates-default/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/show-promotions/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-updates/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-updates-default/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/show-promotions/index.html</loc>
 	</url>
 	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/order/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/development/load-order-files/index.html</loc>
 	</url>
 	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/order/general/installation/index.html</loc>
@@ -40,12 +49,12 @@
 		<loc>https://doc.mods.neonoceancreations.com/s4/order/general/reporting-bugs/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/check-for-preview-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/check-for-preview-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/check-for-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/check-for-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/show-promotions/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/show-promotions/index.html</loc>
 	</url>
 </urlset>

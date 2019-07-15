@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang = "en">
+	<head>
+		<title>Docs - Order: Load Order Files</title>
+		<meta charset="utf-8"/>
+		
+		<base href = "../../../../" />
+		
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "styles/breadcrumbs.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/content.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/error.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/documentation.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/special.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/structure.css" />
+		<link rel = "stylesheet" type = "text/css" href = "styles/universal.css" />
+		
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122165204-3"></script>
+		<script src = "indexing/structure_indexing.js"></script>
+		<script src = "scripts/analytics.js"></script>
+		<script src = "scripts/content.js"></script>
+		<script src = "scripts/jquery.js"></script>
+		<script src = "scripts/structure.js"></script>
+	</head>
+
+	<body>
+		<div class = "Document">
+			<div class = "Header_Container">
+				<div class = "Header">
+					<div class = "Header_Navigation_Container">
+						<span id = "Header_Navigation_Main" class = "Header_Navigation">
+							<a id = "Header_Navigation_Main_Link" class = "Header_Navigation_Link" href = "index.html"><!--
+								-->NeonOcean<!--
+							--></a>
+						</span>
+						
+						<span id = "Header_Navigation_Return" class = "Header_Navigation">
+							<a id = "Header_Navigation_Return_Link" class = "Header_Navigation_Link" href = "https://www.neonoceancreations.com/"><!--
+								-->Return to the main site<!--
+							--></a>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class = "Sidebar_Container">
+				<div id = "Sidebar" class = "Sidebar">
+
+				</div>
+			</div>
+		
+			<div class = "Content_Container">
+				<div class = "Content">
+					<div class = "Content_Offset"><!--
+						--><div class = "Special_Spacer"></div>
+						
+						<div class = "Document_Breadcrumbs_Container">
+							<div class = "Document_Breadcrumbs"><!--
+								--><span class = "Document_Breadcrumb"><!--
+									-->The Sims 4<!--
+								--></span>
+								
+								<span class = "Document_Breadcrumb_Separator"><!--
+									-->&nbsp;/&nbsp;<!--
+								--></span>
+								
+								<a class = "Document_Breadcrumb_Link" href = "s4\order\index.html"><!--
+									-->Order<!--
+								--></a>
+								
+								<span class = "Document_Breadcrumb_Separator"><!--
+									-->&nbsp;/&nbsp;<!--
+								--></span>
+								
+								<span class = "Document_Breadcrumb"><!--
+									-->Development<!--
+								--></span>
+								
+								<span class = "Document_Breadcrumb_Separator"><!--
+									-->&nbsp;/&nbsp;<!--
+								--></span>
+								
+								<a class = "Document_Breadcrumb_Link" href = "s4\order\development\load-order-files\index.html"><!--
+									-->Load Order Files<!--
+								--></a><!--
+						--></div>
+						</div>
+						
+						<div class = "Special_Spacer"></div>
+						
+						<div id = "Documentation_Container" class = "Documentation_Container">
+							<div id = "Documentation" class = "Documentation"><!--
+								--><h1>Load Order Files</h1>
+								
+								<p>Load order files are Order's way of discerning what order to load each mod, as the name might imply.</p>
+								
+								<hr />
+								
+								<h2>The File</h2>
+								<p>To discover the load order file, it must be placed anywhere inside The Sims 4's mod folder. Additionally, the load order file's name must be prefixed with 'NeonOcean.Order-Load_Order' and the file's extension should be '.json'. The load order file's name and file extension are not case sensitive.</p>
+								
+								<hr />
+								
+								<h2>The File's Contents</h2>
+								<p>A load order file must contain data in the JSON format for instructing Order on the load order of the mod. The root of the load order file should be a JSON array of JSON objects. Each JSON object in the array represents a load order level.</p>
+								
+								<h3>Example load order file</h3>
+								<code><pre style = "border-style: solid; border-width: 1px; padding: 20px;"><!--
+								-->[<br /><!--
+								-->	{<br /><!--
+								-->		"Level": -100,<br /><!--
+								--><br /><!--
+								-->		"Paths": [<br /><!--
+								-->			{<br /><!--
+								-->				"Root": "Current",<br /><!--
+								-->				"Path": "Example.ts4script"<br /><!--
+								-->			}<br /><!--
+								-->		],<br /><!--
+								--><br /><!--
+								-->		"Functions": [<br /><!--
+								-->			{<br /><!--
+								-->				"Module": "ExampleMod.Loader",<br /><!--
+								-->				"Function": "Load",<br /><!--
+								-->				"Arguments": [ "FunctionArgument" ],<br /><!--
+								-->				"KeywordArguments": { }<br /><!--
+								-->			}<br /><!--
+								-->		]<br /><!--
+								-->	},<br /><!--
+								-->	{<br /><!--
+								-->		"Level": 50,<br /><!--
+								--><br /><!--
+								-->		"Paths": [<br /><!--
+								-->			{<br /><!--
+								-->				"Root": "Mods",<br /><!--
+								-->				"Path": "Example2Folder/Example2.ts4script"<br /><!--
+								-->			}<br /><!--
+								-->		]<br /><!--
+								-->	}<br /><!--
+								-->]<br /><!--
+								--></pre></code>
+								
+								<h3>Attributes</h3>
+								<ul>
+								<li><b>Level (Optional attribute):</b> A number that controls when the corresponding script paths will be imported and the functions called. The paths and functions with the lowest level value will be dealt with first. This value supports decimal places and can even be negative infinity or positive infinity. If this attribute does not exist all paths and functions in the JSON object will default to level 0. All script paths without load order files pointing to them will also be handled at level 0.</li>
+								
+								<li><b>Paths (Partially Optional attribute):</b> Another array of JSON objects, each of this array's object points Order to a script path meant to be imported at the containing object's level. If this doesn't exist in the containing object then the 'Functions' attribute must exist.
+									<ul>
+										<li><b>Root:</b> This value tells Order where to start looking for the script path, it can have three possible values: S4, Mods and Current. For the value 'S4', order will start looking from The Sims 4's user data path (The folder that contains the mod folder). If the root value is 'Mods', we will start looking from the mod folder. With the value 'Current', Order will begin the search from the folder it found the load order file in. The root value is required to exist in every path JSON object, otherwise Order will ignore the file. Note that root values are not case sensitive, both 'Mods' and 'mods' would be a valid value.</li>
+										<li><b>Path:</b> The path value represents the relative file path to target script path from the root.</li>
+									</ul>
+								</li>
+								<li><b>Functions (Partially Optional attribute):</b> Similar to the paths attribute, this is also an array of JSON objects. A load order function is used to direct Order to call specific Python functions at the containing object's level. All function calls will always occur after all Python modules in all script paths on the same level are imported.  If this doesn't exist in the containing object then the 'Paths' attribute must exist.
+									<ul>
+										<li><b>Module:</b> The Python module the targeted Python function resides in.</li>
+										<li><b>Function:</b> The name of the Python targeted Python function.</li>
+										<li><b>Arguments (Optional attribute):</b> A JSON array of arguments to be passed to the target function.</li>
+										<li><b>KeywordArguments (Optional attribute):</b> A JSON object that is passed to the target function as the keyword arguments.</li>
+									</ul>
+								</li>
+								</ul>
+								
+								<hr />
+								
+								<h2>Load Order Errors</h2>
+								
+								<p>Any problem load order files will generally be ignored by Order. Information on the issues within your order files will be written to a log file at '&lt;Sims 4 user data path&gt;\NeonOcean\Debug\Mods\NeonOcean.Order\&lt;Game start time&gt;\Log.xml' each time the game starts.</p>
+								<!--
+							--></div>
+						</div><!--
+					--></div>
+				</div>
+				
+				<div class = "Content_Footer" />
+			</div>
+		</div>
+	</body>
+</html>

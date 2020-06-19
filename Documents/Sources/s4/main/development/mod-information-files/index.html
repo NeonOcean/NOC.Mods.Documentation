@@ -1,0 +1,90 @@
+<h1>Mod Information Files</h1>
+
+<p>Mod information files are how you signal to Main that your mod exists.</p>
+
+<hr />
+
+<h2>The File</h2>
+<p>To discover the mod information file, it must be placed anywhere inside The Sims 4's mod folder. Additionally, the file's name must contain 'NeonOcean-Mod' and the file's extension should be '.json'. The info file's name and file extension are not case sensitive.</p>
+
+<hr />
+
+<h2>The File's Contents</h2>
+<p>A mod information file must contain data, in the JSON format, that tells Main some relativity simple information about your mod. The root of the info file should be a JSON object (converts to a dictionary in python).</p>
+
+<h3>Example Mod Info File</h3>
+<code><pre style = "border-style: solid; border-width: 1px; padding: 20px;"><!--
+-->{</br><!--
+-->	"Namespace": "Alice.Example",</br><!--
+-->	"Name": "Example",</br><!--
+-->	"Author": "Alice",</br><!--
+-->	"Version": "1.0.0",</br><!--
+-->	"VersionDisplay": "2020.1.5",</br><!--
+-->	"Rating": "Normal",</br><!--
+-->	"LoadController": "NeonOcean.S4.Main",</br><!--
+-->	"ScriptPaths": [</br><!--
+-->		{</br><!--
+-->			"Root": "Current",</br><!--
+-->			"Path": "Alice.Example.Archive"</br><!--
+-->		}</br><!--
+-->	],</br><!--
+-->	"RequiredMods": [</br><!--
+-->		"NeonOcean.S4.Main"</br><!--
+-->	],</br><!--
+-->	"LoadBefore": [</br><!--
+-->		"Alice.Example_2"</br><!--
+-->	],</br><!--
+-->	"LoadAfter": [</br><!--
+-->		"NeonOcean.S4.Main"</br><!--
+-->	],</br><!--
+-->	"Compatibility": {</br><!--
+-->		"NeonOcean.S4.Main": {</br><!--
+-->			"LowestVersion":  "2.0.0"</br><!--
+-->		}</br><!--
+-->	}</br><!--
+-->	"BuildDate": "2020-06-16",</br><!--
+-->	"BuildGameVersion": "1.63.136.1010"</br><!--
+-->}<!--
+--></pre></code>
+
+<h3>Attributes</h3>
+<ul>
+	<li><b>Namespace (Required attribute):</b> A unique identifier for your mod. This is the name by which our system we will look up your mod. If your mod has code, its a good idea to use the path at which your code occupies for this attribute. This practice may even be required for use of certain features in Main.</li>
+	
+	<li><b>Name (Required attribute):</b> The display name of your mod.</li>
+	<li><b>Author (Required attribute):</b> The author of your mod.</li>
+	<li><b>Version (Required attribute):</b> The version number for your mod. These numbers <u>must</u> follow the semantic versioning specification. https://semver.org/ </li>
+	<li><b>VersionDisplay (Optional attribute):</b> What will be displayed to the user any time they might be shown this mod's version number. If this attribute doesn't exists we will just display the actual version number. This is useful if your mod uses some other weird versioning system.</li>
+	<li><b>Rating (Optional attribute):</b> This attribute can have one of two values, Normal and NSFW. Allows you to indicate whether or not your mod has adult content.</li>
+	<li><b>LoadController (Optional attribute):</b> The namespace of the mod that is in charge of loading this mod's python code, if it has any.</li>
+	<li><b>ScriptPaths (Optional attribute):</b> An array of JSON objects that indicate to Main where your mod stores its python code. This attribute is necessary if you want main to handle your mod's loading.<br/>
+		<ul>
+			<li><b>Root (Required attribute):</b> The root path at which we should start the search for the python code. This attribute have the value "Mods", "S4", and "Current", and is not case sensitive. For "Mods" we will start the search from the game's mods folder, for "S4" we will go from the game's user data folder, and for "Current" we start in the folder we found this mod info file in.</li>
+			<li><b>Path (Required attribute):</b> The path at which the python code resides, relative to the root folder. If your mod is reliant on Main to function, I recommend you store your code in a zip folder, then change its extension from .zip to something else. This way you can make the game never load your mod if Main is not installed.</li>
+		</ul>
+	</li>
+	<li><b>RequiredMods (Optional attribute):</b> A list of mods, by their namespaces, that need to be installed in order for your mod to function. A load controller is required for this attribute to be used.</li>
+	<li><b>LoadBefore (Optional attribute):</b> A list of mods, by their namespaces, to be loaded before your mod is. A load controller is required for this attribute to be used.</li>
+	<li><b>LoadAfter (Optional attribute):</b> A list of mods, by their namespaces, to be loaded after your mod is. A load controller is required for this attribute to be used.</li>
+	<li><b>Compatibility (Optional attribute):</b> An attribute that allows you to specify which versions of a another mod are too old or too new for your mod. This should be an array of JSON objects. A load controller is required for this attribute to be used.</li>
+		<ul>
+			<li><b>LowestVersion (Optional attribute):</b> The lowest possible version number the other mod can be.</li>
+			<li><b>HighestVersion (Optional attribute):</b> The highest possible version number the other mod can be. This will generally not be used as the next incompatible version of another mod has probably not been released yet.</li>
+		</ul>
+	<li><b>BuildDate (Optional attribute):</b> The date at which your mod was built.</li>
+	<li><b>BuildGameVersion (Optional attribute):</b> The version number the game was on when your mod was built.</li>
+</ul>
+
+<hr />
+
+<h3>Other Attributes</h3>
+<p>There are other attributes available to be added to your mod information file. You can find out more about them on other pages.</p>
+<ul>
+	<li><a href="s4/main/development/mod-information-files/distribution">Distribution</a></li>
+</ul>
+
+<hr />
+
+<h2>Mod Information Errors</h2>
+
+<p>Information on the issues within your mod information files will be written to a log file at '&lt;Sims 4 user data path&gt;\NeonOcean\Debug\Mods\NeonOcean.S4.Main\&lt;Game start time&gt;\Log.xml' each time the game starts.</p>

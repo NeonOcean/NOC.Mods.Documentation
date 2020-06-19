@@ -4,6 +4,15 @@
 		<loc>https://doc.mods.neonoceancreations.com/index.html</loc>
 	</url>
 	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/cycle/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/cycle/general/installation/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/cycle/general/reporting-bugs/index.html</loc>
+	</url>
+	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/debug/index.html</loc>
 	</url>
 	<url>
@@ -16,25 +25,31 @@
 		<loc>https://doc.mods.neonoceancreations.com/s4/main/index.html</loc>
 	</url>
 	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/development/mod-information-files/index.html</loc>
+	</url>
+	<url>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/development/mod-information-files/distribution/index.html</loc>
+	</url>
+	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/main/general/installation/index.html</loc>
 	</url>
 	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/main/general/reporting-bugs/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-preview-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mod/check-for-preview-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-preview-updates-default/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mod/check-for-preview-updates-default/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mod/check-for-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/check-for-updates-default/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mod/check-for-updates-default/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mods/show-promotions/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/main/settings/mod/show-promotions/index.html</loc>
 	</url>
 	<url>
 		<loc>https://doc.mods.neonoceancreations.com/s4/order/index.html</loc>
@@ -49,12 +64,12 @@
 		<loc>https://doc.mods.neonoceancreations.com/s4/order/general/reporting-bugs/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/check-for-preview-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mod/check-for-preview-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/check-for-updates/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mod/check-for-updates/index.html</loc>
 	</url>
 	<url>
-		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mods/show-promotions/index.html</loc>
+		<loc>https://doc.mods.neonoceancreations.com/s4/order/settings/mod/show-promotions/index.html</loc>
 	</url>
 </urlset>

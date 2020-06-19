@@ -193,7 +193,7 @@ def _SortStructure (root: _StructureEntry) -> None:
 	duplicateEntries = root.Entries.copy()  # type: typing.List[_StructureEntry]
 	sortedEntries = list()  # type: typing.List[_StructureEntry]
 
-	for count in range(len(root.Entries)):  # type: int
+	for _ in range(len(root.Entries)):  # type: int
 		currentEntryIndex = None  # type: int
 
 		for entryIndex in range(len(duplicateEntries)):  # type: int

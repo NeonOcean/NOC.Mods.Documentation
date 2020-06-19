@@ -1,0 +1,21 @@
+{
+	"FileExtension": "html",
+	
+	"Values": {
+		"Title": "Docs - Sims 4 - Main: Check For Updates"
+	},
+
+	"Sources": {
+		"Documentation": "s4/main/settings/mod/check-for-updates/index.html"
+	},
+	
+	"Scripts": {
+		"Breadcrumbs": {
+			"Module": "Site_NeonOcean_NOC_Mods_Documentation.Scripts.Breadcrumbs",
+			"Function": "BuildBreadcrumbs",
+			"Inputs": [ "DocumentPath" ]
+		}
+	},
+
+	"TemplateConfig": "Documentation.json"
+}

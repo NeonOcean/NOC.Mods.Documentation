@@ -1,0 +1,42 @@
+<h1>Distribution Attribute</h1>
+
+<p>The distribution attribute of a mod information file allows you to notify players of every update to your mod.</p>
+
+<hr />
+
+<h3>Example Distribution Attribute Snippet</h3>
+<code><pre style = "border-style: solid; border-width: 1px; padding: 20px;"><!--
+-->"Distribution": {<br /><!--
+-->	"UpdatesController": "NeonOcean",<br /><!--
+-->	"UpdatesFileURL": "http://alice.github.io/latest.json",<br /><!--
+-->	"DownloadURL": "https://www.alicemods.com/example",<br /><!--
+-->	"PreviewDownloadURL": "https://www.alicemods.com/example"<br /><!--
+-->},<br /><!--
+--></pre></code>
+
+<h3>Attributes</h3>
+<ul>
+	<li><b>UpdatesController (Required attribute):</b> The update controller that should be handling the checks and showing update notifications. The built-in update controller is named "NeonOcean".</li>
+	<li><b>UpdatesFileURL (Required attribute):</b> A URL link leading to a file that tells the update controller whether or not an update to your mod has been released. More information on this file will be listed further down this page.</li>
+	<li><b>DownloadURL (Optional attribute):</b> A URL may send the player to if they elect to update your mod when prompted. This URL should be used when a stable update has been released. If this attribute is not used, the player should simply be told an update is available, with no link provied.</li>
+	<li><b>PreviewDownloadURL (Optional attribute):</b> A URL may send the player to if they elect to update your mod when prompted. This URL should be used when a preview update has been released. If this attribute is not used, we will send them to the download URL instead.</li>
+</ul>
+
+<hr />
+
+<h1>Updates Files</h1>
+
+<p>Updates files are used by updates controllers to determine whether or not a mod is out of date.</p>
+
+<hr />
+
+<h3>Example Updates File</h3>
+<p>This is an example that works with the built-in update controller. If the release number or preview number is greater than the current version number, the player will be notified of the update.</p>
+<code><pre style = "border-style: solid; border-width: 1px; padding: 20px;"><!--
+-->{<br /><!--
+-->	"Alice.Example": {<br /><!--
+-->		"Release": "1.0.0"<br /><!--
+-->		"Preview": "1.1.0"<br /><!--
+-->	},<br /><!--
+-->},<br /><!--
+--></pre></code>

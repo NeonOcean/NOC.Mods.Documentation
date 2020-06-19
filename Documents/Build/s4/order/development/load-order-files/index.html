@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang = "en">
 	<head>
-		<title>Docs - Order: Load Order Files</title>
+		<title>Docs - Sims 4 - Order: Load Order Files</title>
 		<meta charset="utf-8"/>
 		
 		<base href = "../../../../" />
@@ -98,12 +98,12 @@
 								<hr />
 								
 								<h2>The File</h2>
-								<p>To discover the load order file, it must be placed anywhere inside The Sims 4's mod folder. Additionally, the load order file's name must be prefixed with 'NeonOcean.Order-Load_Order' and the file's extension should be '.json'. The load order file's name and file extension are not case sensitive.</p>
+								<p>To discover the load order file, it must be placed anywhere inside The Sims 4's mod folder. Additionally, the load order file's name must contain 'NeonOcean-Load-Order' and the file's extension should be '.json'. The load order file's name and file extension are not case sensitive.</p>
 								
 								<hr />
 								
 								<h2>The File's Contents</h2>
-								<p>A load order file must contain data in the JSON format for instructing Order on the load order of the mod. The root of the load order file should be a JSON array of JSON objects. Each JSON object in the array represents a load order level.</p>
+								<p>A load order file must contain data, in the JSON format, for instructing Order on the load order of the mod. The root of the load order file should be a JSON array of JSON objects. Each JSON object in the array represents a load order level.</p>
 								
 								<h3>Example load order file</h3>
 								<code><pre style = "border-style: solid; border-width: 1px; padding: 20px;"><!--
@@ -142,29 +142,29 @@
 								
 								<h3>Attributes</h3>
 								<ul>
-								<li><b>Level (Optional attribute):</b> A number that controls when the corresponding script paths will be imported and the functions called. The paths and functions with the lowest level value will be dealt with first. This value supports decimal places and can even be negative infinity or positive infinity. If this attribute does not exist all paths and functions in the JSON object will default to level 0. All script paths without load order files pointing to them will also be handled at level 0.</li>
+									<li><b>Level (Optional attribute):</b> A number that controls when the corresponding script paths will be imported and the functions called. The paths and functions with the lowest level value will be dealt with first. This value supports decimal places and can even be negative infinity or positive infinity. If this attribute does not exist all paths and functions in the JSON object will default to level 0. All script paths without load order files pointing to them will also be handled at level 0.</li>
 								
-								<li><b>Paths (Partially Optional attribute):</b> Another array of JSON objects, each of this array's object points Order to a script path meant to be imported at the containing object's level. If this doesn't exist in the containing object then the 'Functions' attribute must exist.
-									<ul>
-										<li><b>Root:</b> This value tells Order where to start looking for the script path, it can have three possible values: S4, Mods and Current. For the value 'S4', order will start looking from The Sims 4's user data path (The folder that contains the mod folder). If the root value is 'Mods', we will start looking from the mod folder. With the value 'Current', Order will begin the search from the folder it found the load order file in. The root value is required to exist in every path JSON object, otherwise Order will ignore the file. Note that root values are not case sensitive, both 'Mods' and 'mods' would be a valid value.</li>
-										<li><b>Path:</b> The path value represents the relative file path to target script path from the root.</li>
-									</ul>
-								</li>
-								<li><b>Functions (Partially Optional attribute):</b> Similar to the paths attribute, this is also an array of JSON objects. A load order function is used to direct Order to call specific Python functions at the containing object's level. All function calls will always occur after all Python modules in all script paths on the same level are imported.  If this doesn't exist in the containing object then the 'Paths' attribute must exist.
-									<ul>
-										<li><b>Module:</b> The Python module the targeted Python function resides in.</li>
-										<li><b>Function:</b> The name of the Python targeted Python function.</li>
-										<li><b>Arguments (Optional attribute):</b> A JSON array of arguments to be passed to the target function.</li>
-										<li><b>KeywordArguments (Optional attribute):</b> A JSON object that is passed to the target function as the keyword arguments.</li>
-									</ul>
-								</li>
+									<li><b>Paths (Partially Optional attribute):</b> Another array of JSON objects, each of this array's object points Order to a script path meant to be imported at the containing object's level. If this doesn't exist in the containing object then the 'Functions' attribute must exist.
+										<ul>
+											<li><b>Root:</b> This value tells Order where to start looking for the script path, it can have three possible values: S4, Mods and Current. For the value 'S4', order will start looking from The Sims 4's user data path (The folder that contains the mod folder). If the root value is 'Mods', we will start looking from the mod folder. With the value 'Current', Order will begin the search from the folder it found the load order file in. The root value is required to exist in every path JSON object, otherwise Order will ignore the file. Note that root values are not case sensitive, both 'Mods' and 'mods' would be a valid value.</li>
+											<li><b>Path:</b> The path value represents the relative file path to target script path from the root.</li>
+										</ul>
+									</li>
+									<li><b>Functions (Partially Optional attribute):</b> Similar to the paths attribute, this is also an array of JSON objects. A load order function is used to direct Order to call specific Python functions at the containing object's level. All function calls will always occur after all Python modules in all script paths on the same level are imported.  If this doesn't exist in the containing object then the 'Paths' attribute must exist.
+										<ul>
+											<li><b>Module:</b> The Python module the targeted Python function resides in.</li>
+											<li><b>Function:</b> The name of the Python targeted Python function.</li>
+											<li><b>Arguments (Optional attribute):</b> A JSON array of arguments to be passed to the target function.</li>
+											<li><b>KeywordArguments (Optional attribute):</b> A JSON object that is passed to the target function as the keyword arguments.</li>
+										</ul>
+									</li>
 								</ul>
 								
 								<hr />
 								
 								<h2>Load Order Errors</h2>
 								
-								<p>Any problem load order files will generally be ignored by Order. Information on the issues within your order files will be written to a log file at '&lt;Sims 4 user data path&gt;\NeonOcean\Debug\Mods\NeonOcean.Order\&lt;Game start time&gt;\Log.xml' each time the game starts.</p>
+								<p>Any problem load order files will generally be ignored by Order. Information on the issues within your order files will be written to a log file at '&lt;Sims 4 user data path&gt;\NeonOcean\Debug\Mods\NeonOcean.S4.Order\&lt;Game start time&gt;\Log.xml' each time the game starts.</p>
 								<!--
 							--></div>
 						</div><!--
